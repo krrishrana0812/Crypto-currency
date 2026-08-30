@@ -1,0 +1,276 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          .navbar{
+        background-color: #1f2937;
+        padding: 12px 25px;
+      }
+      .navbar-brand{
+        color: white !important;
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .navbar .nav-link{
+        color:#e5e7eb !important;
+        font-size: 16px;
+        margin-left: 15px;
+        transition: 0.3s;
+      }
+      .navbar .nav-link:hover{
+        color: #38bdf8 !important;
+
+      }
+      .navbar .navlink.active{
+        color:#38bdf8 !important;
+      }
+      .carousel{
+        width: 100;
+        height: calc(100vh-65px);
+        overflow: hidden;
+      }
+      
+/* Each slide */
+      .carousel-item{
+        height:calc(100vh-65px);
+        position: relative;
+      }
+      /* Images */
+      .carousel-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+      }
+      /* Dark overlay on images */
+      .carousel-item::after{
+        content:"";
+        position:absolute;
+        inset:0;
+        background: rgba(0,0,0,0.35);
+
+      }
+      /* Caption */
+      .carousel-cation{
+        z-index: 2;
+        bottom: 25%;
+        text-align: center;
+
+      }
+      /* Heading */
+      .carousel-cation h5{
+        font-size: 50px;
+        font-weight: 700;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 8px black;
+      }
+      /* Paragraph */
+      .carousel-cation p{
+        font-size: 20px;
+        color:white;
+        text-shadow:1px 1px 5px black;
+      }
+      /* Indicators */
+      .carousel-indicators{
+        z-index: 3;
+
+      }
+      .carousel-indicators button{
+        width: 35px;
+        height: 4px;
+        margin:0 5px;
+      }
+      /* Previous / Next buttons */
+      .carousel-control-prev,.carousel-control-next{
+        z-index: 3;
+        width: 8%;
+      }
+      /* Hover effect on controls */
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover{
+        background: rgba(0,0,0,0.15);
+      }
+      /* =========================
+   BODY
+   ========================= */
+
+body {
+    background-color: #111827;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   ABOUT CONTAINER
+   ========================= */
+
+.about-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* =========================
+   ABOUT HEADING
+   ========================= */
+
+.about-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 45px;
+}
+
+.about-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #38bdf8;
+    margin: 15px auto 0;
+    border-radius: 5px;
+}
+
+
+/* =========================
+   IMAGE
+   ========================= */
+
+.about-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    transition: 0.3s;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================
+   TEXT SECTION
+   ========================= */
+
+.about-text {
+    padding-left: 30px;
+}
+
+.about-text p {
+    color: #d1d5db;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .about-title {
+        font-size: 38px;
+    }
+
+    .about-text {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .about-image {
+        height: 250px;
+    }
+
+}
+
+
+
+   </style>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+   </head>
+   <body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg -dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav" bg="dark"text="light">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="about.html">About US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="crypto.html">Top 100 CRYPTOCOINS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container about-container">
+
+    <h1 class="about-title">ABOUT US</h1>
+
+    <div class="row align-items-center">
+
+        <div class="col-md-4">
+            <img 
+                src="https://img.freepik.com/premium-photo/crypto-currency-chart-with-values-moving-up-down-trading-statistics-analytics-laptop-scr_960782-32626.jpg?w=740"
+                class="about-image"
+                alt="Cryptocurrency">
+        </div>
+
+        <div class="col-md-8 about-text">
+
+            <p>
+                We are a passionate team dedicated to making cryptocurrency
+                and blockchain technology more accessible, secure, and
+                understandable for everyone. Our mission is to empower
+                individuals and businesses with the knowledge, tools, and
+                opportunities needed to participate in the rapidly evolving
+                digital economy.
+            </p>
+
+            <p>
+                Our team consists of experts in blockchain development,
+                cryptocurrency trading, cybersecurity, and financial education.
+                We are committed to providing high-quality content, innovative
+                solutions, and exceptional support to our users.
+            </p>
+
+            <p>
+                Whether you're a beginner looking to learn about cryptocurrencies
+                or an experienced trader seeking advanced tools, we are here to
+                help you navigate the exciting world of digital assets. Join us
+                on this journey to explore the potential of blockchain technology
+                and unlock new opportunities in the world of finance.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+   </body>
+   </html>
